@@ -20,7 +20,7 @@ unsigned long fib_iterative(int n) {
 
 unsigned long fib_recursive(int n) {
    if (n == 0 || n == 1) {
-      return n;
+      return 0;
    }
    return fib_recursive(n - 1) + fib_recursive(n - 2);
 }
@@ -43,7 +43,7 @@ int main(int argc, char* argv[]) {
          printf("%lu", fib_iterative(nth));
       }
       else if (strcmp(argv[2], "-r") || strcmp(argv[2], "r")) {
-         printf("%lu", fib_recursive(nth - 1));
+         printf("%lu", fib_recursive(nth));
       }
       else {
          printf("Invalid argument.");
